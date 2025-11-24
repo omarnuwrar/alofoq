@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>شركة الأفق التدريجي للصناعات البلاستيكية</title>
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+    <style>
+        /* Critical CSS - Load immediately */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Better mobile viewport handling */
+html {
+    height: 100%;
+    height: -webkit-fill-available;
+    visibility: visible;
+    opacity: 1;
+}
+
+body {
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    padding-top: 0;
+}
+
+/* Ensure loader shows immediately */
+.loader {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 9999 !important;
+}
+
+/* General section styling */
+section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 55px;
+    width: auto;
+}
+
+.company-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name h1 {
+    font-size: 22px;
+    color: #1a365d;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.company-name span {
+    font-size: 11px;
+    color: #718096;
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #2b6cb0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2b6cb0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1a365d;
+    z-index: 1001;
+}
+
+/* Hero Section - UPDATED FOR FULL SCREEN */
+.hero {
+    margin-top: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    padding: 0 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 85px;
+    padding-bottom: 40px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200') center/cover;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: #e0e7ff;
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: #cbd5e0;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background: #ffffff;
+    color: #1e40af;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.cta-button.secondary:hover {
+    background: #ffffff;
+    color: #1e40af;
+}
+
+/* Stats Section */
+.stats {
+    background: #f7fafc;
+    padding: 60px 30px;
+    width: 100%;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    font-size: 42px;
+    color: #2b6cb0;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a365d;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #718096;
+    font-weight: 500;
+}
+
+/* About Section */
+.about {
+    padding: 80px 30px;
+    background: #ffffff;
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: #1a365d;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-features {
+    display: grid;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: #edf2f7;
+    transform: translateX(-5px);
+}
+
+.feature-icon {
+    font-size: 24px;
+    color: #2b6cb0;
+    min-width: 30px;
+}
+
+.feature-text {
+    font-size: 16px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Products Section */
+.products {
+    padding: 80px 30px;
+    background: #f7fafc;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #718096;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 25px;
+}
+
+.product-content h3 {
+    font-size: 20px;
+    color: #1a365d;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.product-content p {
+    font-size: 15px;
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 30px;
+    background: #ffffff;
+    width: 100%;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: #2b6cb0;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(43, 108, 176, 0.1);
+}
+
+.service-icon {
+    font-size: 52px;
+    color: #2b6cb0;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #718096;
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 30px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    position: relative;
+    width: 100%;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200') center/cover;
+    opacity: 0.05;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-header h2 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #e0e7ff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    font-size: 48px;
+    color: #2b6cb0;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 22px;
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-card p {
+    font-size: 17px;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.contact-card a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map-section {
+    padding: 0;
+    background: #f7fafc;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    background: #e2e8f0;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: #1a202c;
+    color: #e2e8f0;
+    padding: 60px 30px 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-section p {
+    font-size: 15px;
+    color: #cbd5e0;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo-text {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #2d3748;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #2b6cb0;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid #2d3748;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    color: #a0aec0;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #2b6cb0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #1e40af;
+    transform: translateY(-5px);
+}
+
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    margin-bottom: 30px;
+    animation: logoFloat 2s ease-in-out infinite;
+}
+
+.loader-logo img {
+    height: 120px;
+    width: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loader-text {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* iOS Safari specific fix */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .contact-header h2 {
+        font-size: 32px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        height: -webkit-fill-available;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 80px 30px 30px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .company-name h1 {
+        font-size: 16px;
+    }
+
+    .company-name span {
+        font-size: 10px;
+    }
+
+    .logo-container img {
+        height: 45px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        padding: 75px 20px 50px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+
+    .stats {
+        padding: 40px 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-item {
+        padding: 25px 20px;
+    }
+
+    .stat-icon {
+        font-size: 36px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .products {
+        padding: 50px 20px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services {
+        padding: 50px 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .service-icon {
+        font-size: 42px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 15px;
+    }
+
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .contact-header h2 {
+        font-size: 26px;
+    }
+
+    .contact-header p {
+        font-size: 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-logo img {
+        height: 50px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .whatsapp-float a {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+
+    .scroll-top {
+        bottom: 90px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .loader-logo img {
+        height: 90px;
+    }
+
+    .loader-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name h1 {
+        font-size: 14px;
+    }
+
+    .company-name span {
+        font-size: 9px;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        padding: 70px 15px 40px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .contact-header h2 {
+        font-size: 24px;
+    }
+
+    .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 80px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <img src="logo.png" alt="شركة الأفق التدريجي للصناعات البلاستيكية">
+        </div>
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/218912151548" target="_blank" title="تواصل معنا عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="شركة الأفق التدريجي للصناعات البلاستيكية">
+                <div class="company-name">
+                    <h1>شركة الأفق التدريجي</h1>
+                    <span>للصناعات البلاستيكية</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="hero-title">شركة الأفق التدريجي للصناعات البلاستيكية</h2>
+            <p class="hero-subtitle">ALOFOQ ALTADREGE COMPANY FOR PLASTIC INDUSTRIES</p>
+            <p class="hero-description">
+                نقدم حلولاً مبتكرة في مجال الصناعات البلاستيكية، حيث ننتج تشكيلة واسعة من المنتجات البلاستيكية عالية الجودة باستخدام أحدث التقنيات وأفضل المواد الخام
+            </p>
+            <div class="cta-buttons">
+                <a href="#products" class="cta-button">
+                    <i class="fas fa-boxes"></i>
+                    تصفح المنتجات
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <i class="fas fa-phone"></i>
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <div class="stat-icon"><i class="fas fa-industry"></i></div>
+                <div class="stat-number">100+</div>
+                <div class="stat-label">منتج متنوع</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">عميل راضٍ</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-icon"><i class="fas fa-award"></i></div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">سنة خبرة</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-icon"><i class="fas fa-truck"></i></div>
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">خدمة التوصيل</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="FACTORY.png" alt="عن الشركة" class="about-image fade-in">
+            <div class="about-content fade-in">
+                <h2>من نحن</h2>
+                <p>
+                    شركة الأفق التدريجي للصناعات البلاستيكية هي إحدى الشركات الرائدة في ليبيا في مجال تصنيع المنتجات البلاستيكية. نتميز بتقديم منتجات عالية الجودة تلبي احتياجات السوق المحلي والدولي.
+                </p>
+                <p>
+                    نستخدم أحدث التقنيات في مجال الصناعات البلاستيكية ونلتزم بأعلى معايير الجودة، مما يجعلنا الخيار الأمثل للعملاء الذين يبحثون عن منتجات بلاستيكية متينة وموثوقة.
+                </p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="feature-text">جودة عالية في التصنيع</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="feature-text">تصميمات مبتكرة وعملية</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="feature-text">أسعار تنافسية</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="feature-text">خدمة عملاء متميزة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2>منتجاتنا</h2>
+            <p>نوفر مجموعة واسعة من المنتجات البلاستيكية عالية الجودة لجميع الاستخدامات</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card fade-in">
+                <img src="https://blog-ar.kuwaitmart.com/wp-content/uploads/2024/04/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D8%AC%D8%AF%D9%88%D9%89-%D9%85%D8%B5%D9%86%D8%B9-%D8%A8%D9%84%D8%A7%D8%B3%D8%AA%D9%8A%D9%830.webp" alt="منتجات بلاستيكية منزلية" class="product-image">
+                <div class="product-content">
+                    <h3>منتجات بلاستيكية منزلية</h3>
+                    <p>تشكيلة واسعة من المنتجات البلاستيكية المنزلية عالية الجودة والمتانة</p>
+                </div>
+            </div>
+            <div class="product-card fade-in">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.Bbn2no1Gd4kzgOhLJn2jhQHaDt?rs=1&pid=ImgDetMain&o=7&rm=3" alt="منتجات بلاستيكية صناعية" class="product-image">
+                <div class="product-content">
+                    <h3>منتجات بلاستيكية صناعية</h3>
+                    <p>منتجات بلاستيكية متخصصة للاستخدامات الصناعية والتجارية</p>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>خدماتنا</h2>
+            <p>نقدم مجموعة شاملة من الخدمات لضمان رضا عملائنا</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-industry"></i></div>
+                <h3>التصنيع حسب الطلب</h3>
+                <p>نقوم بتصنيع المنتجات البلاستيكية حسب متطلبات العملاء وتصميماتهم الخاصة مع ضمان أعلى معايير الجودة</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3>التصميم والتطوير</h3>
+                <p>فريق تصميم متخصص لإنشاء منتجات مبتكرة تلبي احتياجات السوق وتواكب أحدث الاتجاهات</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>التوصيل السريع</h3>
+                <p>خدمة توصيل سريعة وآمنة لجميع أنحاء ليبيا مع فريق محترف يضمن وصول منتجاتك في الوقت المحدد</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>ضمان الجودة</h3>
+                <p>جميع منتجاتنا مصنوعة بأعلى معايير الجودة مع ضمان شامل على كافة المنتجات لضمان راحة بالك</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>دعم فني متميز</h3>
+                <p>فريق دعم فني متاح على مدار الساعة للإجابة على استفساراتكم وتقديم المساعدة الفنية اللازمة</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>استشارات مجانية</h3>
+                <p>نقدم استشارات مجانية لمساعدتك في اختيار المنتجات البلاستيكية المناسبة لاحتياجاتك الخاصة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>تواصل معنا</h2>
+                <p>نحن هنا للإجابة على جميع استفساراتكم وخدمتكم</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>اتصل بنا</h3>
+                    <p>
+                        <a href="tel:+218912151548">0912151548</a><br>
+                        <a href="tel:+218922151548">0922151548</a>
+                    </p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>
+                        <a href="mailto:company.alofq@gmail.com">company.alofq@gmail.com</a>
+                    </p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>الموقع</h3>
+                    <p>
+                        ليبيا , زليتن<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.050287389391!2d14.567682310972687!3d32.46967598041967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a6972181210fb5%3A0xc3ac621b95e193ad!2z2YXZg9iq2Kgg2YrYp9mC2YjYqg!5e0!3m2!1sar!2sca!4v1763231576225!5m2!1sar!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="شركة الأفق التدريجي للصناعات البلاستيكية">
+                    <div class="footer-logo-text">الأفق التدريجي</div>
+                </div>
+                <p>شركة رائدة في مجال الصناعات البلاستيكية في ليبيا، نقدم منتجات عالية الجودة باستخدام أحدث التقنيات وأفضل المواد الخام</p>
+                <div class="social-links">
+                    <a href="https://wa.me/218912151548" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:company.alofq@gmail.com" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-left"></i> من نحن</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> المنتجات</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> الخدمات</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>منتجاتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> منتجات بلاستيكية منزلية</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> منتجات بلاستيكية صناعية</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> عبوات بلاستيكية</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> منتجات حسب الطلب</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> منتجات زراعية بلاستيكية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>معلومات الاتصال</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+218912151548"><i class="fas fa-phone"></i> 0912151548</a></li>
+                    <li><a href="tel:+218922151548"><i class="fas fa-phone"></i> 0922151548</a></li>
+                    <li><a href="mailto:company.alofq@gmail.com"><i class="fas fa-envelope"></i> company.alofq@gmail.com</a></li>
+                    <li><a href="https://maps.app.goo.gl/DQ1eUrNXRzi5n4iYA"><i class="fas fa-map-marker-alt"></i> ليبيا - زليتن</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 شركة الأفق التدريجي للصناعات البلاستيكية. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loader - Fixed for first load with font loading detection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for fonts to load
+            if (document.fonts) {
+                document.fonts.ready.then(function() {
+                    setTimeout(function() {
+                        document.getElementById('loader').classList.add('hidden');
+                    }, 500);
+                });
+            } else {
+                setTimeout(function() {
+                    document.getElementById('loader').classList.add('hidden');
+                }, 1200);
+            }
+        });
+
+        window.addEventListener('load', function() {
+            document.getElementById('loader').classList.add('hidden');
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade In Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // Counter Animation for Stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let hasAnimated = false;
+
+        const animateCounter = (element) => {
+            const target = parseInt(element.textContent);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current) + '+';
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + '+';
+                }
+            };
+
+            updateCounter();
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    statNumbers.forEach(stat => {
+                        animateCounter(stat);
+                    });
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Fixed: Add loading effect to images (with cache handling)
+        document.querySelectorAll('img').forEach(img => {
+            img.style.transition = 'opacity 0.5s ease';
+
+            // Check if image is already loaded (cached)
+            if (img.complete && img.naturalHeight !== 0) {
+                img.style.opacity = '1';
+            } else {
+                img.style.opacity = '0';
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+
+                // Fallback: show image after 2 seconds
+                setTimeout(() => {
+                    img.style.opacity = '1';
+                }, 2000);
+            }
+        });
+
+        // Add active class to current nav item
+        const sections = document.querySelectorAll('section[id]');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinksItems.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add error handling for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23f0f0f0" width="400" height="300"/%3E%3Ctext fill="%23999" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3Eالصورة غير متوفرة%3C/text%3E%3C/svg%3E';
+                this.style.objectFit = 'contain';
+                this.style.opacity = '1';
+            });
+        });
+
+        // Initialize all animations on page load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+
+            setTimeout(() => {
+                reveal();
+            }, 100);
+        });
+
+        // Add smooth reveal function
+        function reveal() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Call reveal on scroll
+        window.addEventListener('scroll', reveal);
+
+        // Trigger reveal on DOMContentLoaded for faster initial display
+        document.addEventListener('DOMContentLoaded', reveal);
+
+        // Console message
+        console.log('%c شركة الأفق التدريجي للصناعات البلاستيكية ', 'background: #2b6cb0; color: white; font-size: 20px; padding: 10px;');
+        console.log('%c ALOFOQ ALTADREGE COMPANY FOR PLASTIC INDUSTRIES ', 'background: #1a365d; color: white; font-size: 16px; padding: 8px;');
+    </script>
+</body>
+</html>
